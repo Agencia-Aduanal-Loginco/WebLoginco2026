@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loginco – Agencia Aduanal con más de 9 años de experiencia en logística internacional y servicios de comercio exterior. Importación, exportación, almacenaje, flete y más.">
+  <meta name="keywords" content="agencia aduanal, despacho aduanero, importación, exportación, flete marítimo, flete terrestre, almacenaje, comercio exterior, México">
+  <title>Loginco | Agencia Aduanal – Logística Internacional</title>
+
+  <!-- Inter desde Google Fonts (sin archivo local disponible) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── FUENTES LOCALES ─────────────────────────────────────────────────
+       Montserrat: todos los pesos disponibles (locales en /font/)
+       Gentona: fuente display moderna para headings de alto impacto
+       Inter: desde Google Fonts (sin archivo local), usado en body y forms
+    ──────────────────────────────────────────────────────────────────── */
+
+    /* Montserrat Thin (100) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Thin.otf') format('opentype');
+      font-weight: 100;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-ThinItalic.otf') format('opentype');
+      font-weight: 100;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat ExtraLight (200) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-ExtraLight.otf') format('opentype');
+      font-weight: 200;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-ExtraLightItalic.otf') format('opentype');
+      font-weight: 200;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat Light (300) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-LightItalic.otf') format('opentype');
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat Regular (400) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Italic.otf') format('opentype');
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat Medium (500) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Medium.otf') format('opentype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-MediumItalic.otf') format('opentype');
+      font-weight: 500;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat SemiBold (600) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-SemiBold.otf') format('opentype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-SemiBoldItalic.otf') format('opentype');
+      font-weight: 600;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat Bold (700) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-BoldItalic.otf') format('opentype');
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat ExtraBold (800) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-ExtraBold.otf') format('opentype');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-ExtraBoldItalic.otf') format('opentype');
+      font-weight: 800;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* Montserrat Black (900) */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-Black.otf') format('opentype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('font/Montserrat-BlackItalic.otf') format('opentype');
+      font-weight: 900;
+      font-style: italic;
+      font-display: swap;
+    }
+
+    /* ── TOKENS ──────────────────────────────── */
+    :root {
+      --navy:       #00018d;
+      --blue:       #3839bc;
+      --lavender:   #7e71b7;
+      --teal:       #08b8b5;
+      --teal-d:     #069896;
+      --white:      #ffffff;
+      --bg:         #f4f6fb;
+      --border:     #e8ecf5;
+      --muted:      #7a8499;
+      --dark:       #12132a;
+      --grad-hero:  linear-gradient(140deg, #00018d 0%, #0a0a7a 45%, #0d2e7a 100%);
+      --grad-mid:   linear-gradient(135deg, #3839bc 0%, #00018d 100%);
+      --shadow-s:   0 4px 16px rgba(0,1,141,.07);
+      --shadow-m:   0 10px 40px rgba(0,1,141,.11);
+      --r:          16px;
+      --rl:         24px;
+      --t:          .3s ease;
+
+      /* Sistema tipográfico */
+      --font-display:  'Montserrat', sans-serif;               /* Headings hero y section h2 */
+      --font-heading:  'Montserrat', sans-serif;               /* UI labels, botones, stats */
+      --font-body:     'Inter', sans-serif;                    /* Body text, formularios */
+    }
+
+    /* ── RESET ───────────────────────────────── */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body { font-family: var(--font-body); color:var(--dark); background:var(--white); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    img  { max-width:100%; display:block; }
+    a    { text-decoration:none; }
+
+    /* ── LAYOUT ──────────────────────────────── */
+    .wrap { width:100%; max-width:1200px; margin:0 auto; padding:0 2rem; }
+    section { padding:6rem 0; }
+
+    /* ── TYPE ────────────────────────────────── */
+    .lbl {
+      display:inline-block;
+      font-family: var(--font-heading); font-weight:700;
+      font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+      color:var(--teal); margin-bottom:1rem;
+    }
+    .lbl-w { color:rgba(8,184,181,.9); }
+
+    .h2 {
+      font-family: var(--font-display); font-weight:400;
+      font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.18; color:var(--navy);
+      letter-spacing:-.01em;
+    }
+    .h2-w  { color:var(--white); }
+    .h2-c  { text-align:center; }
+
+    .sub { font-size:1.05rem; line-height:1.82; color:var(--muted); margin-top:1rem; }
+    .sub-w { color:rgba(255,255,255,.72); }
+    .sub-c { text-align:center; margin-left:auto; margin-right:auto; max-width:580px; }
+
+    /* ── BUTTONS ─────────────────────────────── */
+    .btn {
+      display:inline-flex; align-items:center; gap:.5rem;
+      font-family: var(--font-heading); font-weight:700;
+      font-size:.92rem; letter-spacing:.04em;
+      padding:.9rem 2.2rem; border-radius:50px;
+      cursor:pointer; transition:all var(--t); border:2px solid transparent;
+    }
+    .btn-teal  { background:var(--teal); color:#fff; box-shadow:0 6px 24px rgba(8,184,181,.38); }
+    .btn-teal:hover { background:var(--teal-d); transform:translateY(-2px); box-shadow:0 10px 32px rgba(8,184,181,.48); }
+    .btn-ghost { background:transparent; color:#fff; border-color:rgba(255,255,255,.45); }
+    .btn-ghost:hover { border-color:#fff; background:rgba(255,255,255,.1); transform:translateY(-2px); }
+
+    /* ── REVEAL ──────────────────────────────── */
+    .rv { opacity:0; transform:translateY(28px); transition:opacity .72s ease, transform .72s ease; }
+    .rv.in { opacity:1; transform:translateY(0); }
+    .d1{transition-delay:.08s} .d2{transition-delay:.16s} .d3{transition-delay:.24s}
+    .d4{transition-delay:.32s} .d5{transition-delay:.40s} .d6{transition-delay:.48s}
+
+    /* ══════════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════════ */
+    #nav {
+      position:fixed; top:0; left:0; right:0; z-index:1000;
+      padding:1.4rem 2rem;
+      display:flex; align-items:center; justify-content:space-between;
+      transition:background var(--t), padding var(--t), box-shadow var(--t);
+    }
+    #nav.up {
+      background:rgba(0,1,141,.97);
+      backdrop-filter:blur(12px);
+      padding:.9rem 2rem;
+      box-shadow:0 2px 30px rgba(0,0,0,.28);
+    }
+    .nav-logo img { height:46px; filter:brightness(0) invert(1); transition:height var(--t); }
+    #nav.up .nav-logo img { height:40px; }
+
+    .nav-ul { display:flex; list-style:none; gap:2.2rem; align-items:center; }
+    .nav-ul a {
+      font-family: var(--font-heading); font-weight:600;
+      font-size:.82rem; letter-spacing:.08em; text-transform:uppercase;
+      color:rgba(255,255,255,.85); position:relative; transition:color var(--t);
+    }
+    .nav-ul a::after {
+      content:''; position:absolute; bottom:-4px; left:0;
+      width:0; height:2px; background:var(--teal); transition:width var(--t);
+    }
+    .nav-ul a:hover, .nav-ul a.on { color:var(--teal); }
+    .nav-ul a:hover::after, .nav-ul a.on::after { width:100%; }
+    .nav-cta { background:var(--teal)!important; color:#fff!important; padding:.55rem 1.35rem!important; border-radius:30px; }
+    .nav-cta::after { display:none!important; }
+    .nav-cta:hover { background:var(--teal-d)!important; }
+
+    /* hamburger */
+    .hbg { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:5px; z-index:1001; }
+    .hbg span { display:block; width:24px; height:2px; background:#fff; border-radius:2px; transition:all var(--t); }
+    .hbg.x span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hbg.x span:nth-child(2) { opacity:0; }
+    .hbg.x span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    /* mobile overlay */
+    .mob-nav {
+      display:none; position:fixed; inset:0;
+      background:var(--navy); z-index:999;
+      flex-direction:column; align-items:center; justify-content:center; gap:2.5rem;
+    }
+    .mob-nav.open { display:flex; }
+    .mob-nav a {
+      font-family: var(--font-heading); font-weight:700;
+      font-size:1.4rem; color:rgba(255,255,255,.85);
+      text-transform:uppercase; transition:color var(--t);
+    }
+    .mob-nav a:hover { color:var(--teal); }
+
+    /* ══════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════ */
+    #inicio {
+      position:relative; min-height:100vh;
+      background:var(--grad-hero);
+      display:flex; align-items:center; justify-content:center; overflow:hidden;
+    }
+    /* grid lines */
+    .hero-grid {
+      position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size:48px 48px;
+    }
+    /* ambient glows */
+    .glow { position:absolute; border-radius:50%; filter:blur(80px); pointer-events:none; animation:pulse 6s ease-in-out infinite alternate; }
+    .g1 { width:700px; height:700px; top:-250px; right:-200px; background:radial-gradient(circle,rgba(8,184,181,.14) 0%,transparent 70%); animation-delay:0s; }
+    .g2 { width:500px; height:500px; bottom:-150px; left:-100px; background:radial-gradient(circle,rgba(126,113,183,.12) 0%,transparent 70%); animation-delay:2s; }
+    .g3 { width:300px; height:300px; top:38%; left:14%; background:radial-gradient(circle,rgba(8,184,181,.08) 0%,transparent 70%); animation-delay:4s; }
+    @keyframes pulse { from{transform:scale(1) translate(0,0);opacity:.7} to{transform:scale(1.1) translate(15px,-10px);opacity:1} }
+    /* rings */
+    .ring { position:absolute; border-radius:50%; border:1px solid rgba(8,184,181,.1); }
+    .r1 { width:500px; height:500px; top:50%; left:75%; transform:translate(-50%,-50%); }
+    .r2 { width:720px; height:720px; top:50%; left:75%; transform:translate(-50%,-50%); }
+    .r3 { width:940px; height:940px; top:50%; left:75%; transform:translate(-50%,-50%); }
+
+    .hero-inner {
+      position:relative; z-index:2;
+      text-align:center; padding:9rem 2rem 7rem; max-width:840px;
+    }
+    .hero-logo { height:88px; width:auto; filter:brightness(0) invert(1); margin:0 auto 2.5rem; }
+    .hero-badge {
+      display:inline-flex; align-items:center; gap:.5rem;
+      background:rgba(8,184,181,.15); border:1px solid rgba(8,184,181,.35);
+      color:var(--teal); padding:.45rem 1.3rem; border-radius:30px;
+      font-family: var(--font-heading); font-weight:700; font-size:.75rem;
+      letter-spacing:.18em; text-transform:uppercase; margin-bottom:2rem;
+    }
+    .hero-badge::before {
+      content:''; width:6px; height:6px; border-radius:50%;
+      background:var(--teal); box-shadow:0 0 8px var(--teal);
+      animation:blink 2s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+    .hero-h1 {
+      font-family: var(--font-display); font-weight:400;
+      font-size:clamp(2.4rem,5.8vw,4rem); color:#fff; line-height:1.1; margin-bottom:1.5rem;
+      letter-spacing:-.02em;
+    }
+    .hero-h1 span { color:var(--teal); }
+    .hero-p { font-size:clamp(1rem,2vw,1.18rem); color:rgba(255,255,255,.7); max-width:540px; margin:0 auto 3rem; line-height:1.75; }
+    .hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    /* scroll hint */
+    .scroll-hint {
+      position:absolute; bottom:2.5rem; left:50%; transform:translateX(-50%);
+      display:flex; flex-direction:column; align-items:center; gap:.6rem;
+      color:rgba(255,255,255,.38); font-size:.68rem;
+      font-family: var(--font-heading); letter-spacing:.15em; text-transform:uppercase;
+    }
+    .mouse { width:22px; height:36px; border:1.5px solid rgba(255,255,255,.22); border-radius:11px; position:relative; }
+    .mouse::after {
+      content:''; position:absolute; width:3px; height:7px;
+      background:rgba(255,255,255,.38); border-radius:2px; top:6px; left:50%;
+      transform:translateX(-50%); animation:ms 1.6s ease-in-out infinite;
+    }
+    @keyframes ms { 0%{opacity:1;top:6px} 100%{opacity:0;top:20px} }
+
+    /* wave utility */
+    .wave { line-height:0; overflow:hidden; }
+    .wave svg { display:block; width:100%; }
+
+    /* ══════════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════════ */
+    #nosotros { background:var(--bg); }
+    .about-g { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; }
+    .about-vis { position:relative; }
+    .about-card {
+      background:var(--navy); border-radius:var(--rl);
+      padding:3rem 2.5rem 3.5rem; position:relative; overflow:hidden;
+    }
+    .about-card::before {
+      content:''; position:absolute; top:-80px; right:-80px;
+      width:260px; height:260px; border-radius:50%; background:rgba(8,184,181,.1);
+    }
+    .about-card::after {
+      content:''; position:absolute; bottom:-40px; left:-40px;
+      width:180px; height:180px; border-radius:50%; background:rgba(126,113,183,.08);
+    }
+    .about-iso { width:70px; filter:brightness(0) invert(1); margin-bottom:2rem; position:relative; z-index:1; }
+    .about-big {
+      font-family: var(--font-heading); font-weight:900;
+      font-size:5.5rem; color:var(--teal); line-height:1; position:relative; z-index:1;
+    }
+    .about-lbl { font-family: var(--font-heading); font-weight:500; font-size:.95rem; color:rgba(255,255,255,.62); margin:.3rem 0 2rem; position:relative; z-index:1; }
+    .about-pts { font-size:.72rem; color:rgba(255,255,255,.36); font-family: var(--font-heading); letter-spacing:.06em; position:relative; z-index:1; }
+    .about-float {
+      position:absolute; bottom:-1.5rem; right:-1.5rem;
+      background:var(--teal); border-radius:var(--r);
+      padding:1.6rem 1.8rem; color:#fff;
+      box-shadow:0 12px 36px rgba(8,184,181,.42); min-width:148px;
+    }
+    .af-n { font-family: var(--font-heading); font-weight:900; font-size:2rem; line-height:1; }
+    .af-l { font-size:.78rem; opacity:.88; margin-top:.3rem; line-height:1.35; }
+    .pillars { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2.2rem; }
+    .pill {
+      background:var(--white); border-radius:12px;
+      padding:1.2rem 1.3rem; border-left:3px solid var(--teal); box-shadow:var(--shadow-s);
+    }
+    .pill-t { font-family: var(--font-heading); font-weight:700; font-size:.88rem; color:var(--navy); margin-bottom:.3rem; }
+    .pill-d { font-size:.8rem; color:var(--muted); line-height:1.5; }
+
+    /* ══════════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════════ */
+    #servicios { background:var(--white); }
+    .srv-intro { text-align:center; margin-bottom:4rem; }
+    .srv-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+    .srv-card {
+      background:var(--bg); border-radius:var(--rl);
+      padding:2.4rem 2rem; position:relative; overflow:hidden;
+      transition:transform var(--t), box-shadow var(--t), background var(--t); cursor:default;
+    }
+    .srv-card::after {
+      content:''; position:absolute; top:0; left:0; right:0;
+      height:3px; background:var(--teal);
+      transform:scaleX(0); transform-origin:left; transition:transform var(--t);
+    }
+    .srv-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-m); background:var(--white); }
+    .srv-card:hover::after { transform:scaleX(1); }
+    .srv-ico {
+      width:60px; height:60px; border-radius:14px;
+      background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:1.6rem; transition:background var(--t);
+    }
+    .srv-card:hover .srv-ico { background:linear-gradient(135deg,var(--teal) 0%,var(--teal-d) 100%); }
+    .srv-ico svg { width:28px; height:28px; fill:#fff; }
+    .srv-t { font-family: var(--font-heading); font-weight:700; font-size:1.06rem; color:var(--navy); margin-bottom:.75rem; }
+    .srv-d { font-size:.88rem; color:var(--muted); line-height:1.72; }
+
+    /* ══════════════════════════════════════════
+       STATS
+    ══════════════════════════════════════════ */
+    #stats { background:var(--grad-mid); padding:5rem 0; }
+    .stats-g { display:grid; grid-template-columns:repeat(4,1fr); }
+    .stat { text-align:center; padding:2.5rem 1.5rem; position:relative; }
+    .stat:not(:last-child)::after {
+      content:''; position:absolute; right:0; top:25%; bottom:25%;
+      width:1px; background:rgba(255,255,255,.15);
+    }
+    .stat-n {
+      font-family: var(--font-heading); font-weight:900;
+      font-size:clamp(2.8rem,5vw,4rem); color:var(--teal); line-height:1; display:block;
+    }
+    .stat-sup { font-size:.5em; vertical-align:super; }
+    .stat-l { font-family: var(--font-heading); font-weight:600; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.72); margin-top:.6rem; }
+
+    /* ══════════════════════════════════════════
+       WAREHOUSE
+    ══════════════════════════════════════════ */
+    #almacen { background:var(--grad-mid); padding-bottom:6rem; }
+    .alm-g { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; padding-top:2rem; }
+    .alm-text { color:#fff; }
+    .alm-list { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
+    .alm-i {
+      background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+      border-left:3px solid var(--teal); border-radius:12px; padding:1.2rem 1.3rem;
+    }
+    .alm-it { font-family: var(--font-heading); font-weight:700; font-size:.85rem; color:#fff; margin-bottom:.3rem; }
+    .alm-id { font-size:.8rem; color:rgba(255,255,255,.6); line-height:1.5; }
+    .alm-cards { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; }
+    .alm-card {
+      background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--r); padding:2rem 1.6rem; text-align:center;
+      transition:background var(--t), transform var(--t);
+    }
+    .alm-card:hover { background:rgba(255,255,255,.12); transform:translateY(-4px); }
+    .alm-card.feat {
+      grid-column:1/-1; background:rgba(8,184,181,.2); border-color:rgba(8,184,181,.4);
+      display:flex; align-items:center; gap:2.5rem; text-align:left; padding:2rem 2.5rem;
+    }
+    .alm-big { font-family: var(--font-heading); font-weight:900; font-size:3.2rem; color:var(--teal); line-height:1; white-space:nowrap; }
+    .alm-card:not(.feat) .alm-big { font-size:2.5rem; }
+    .alm-unit { font-family: var(--font-heading); font-weight:600; font-size:.82rem; color:rgba(255,255,255,.55); margin-top:.2rem; }
+    .alm-lbl { font-family: var(--font-heading); font-weight:600; font-size:.9rem; color:rgba(255,255,255,.88); line-height:1.35; }
+    .alm-card:not(.feat) .alm-lbl { margin-top:.4rem; }
+
+    /* ══════════════════════════════════════════
+       WHY US
+    ══════════════════════════════════════════ */
+    #porque { background:var(--white); }
+    .why-hd { text-align:center; margin-bottom:4rem; }
+    .why-g { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+    .why-card { text-align:center; padding:2.6rem 1.6rem; border-radius:var(--rl); transition:all var(--t); }
+    .why-card:hover { background:var(--bg); transform:translateY(-5px); }
+    .why-ico {
+      width:78px; height:78px; border-radius:50%;
+      background:linear-gradient(135deg,rgba(0,1,141,.07) 0%,rgba(8,184,181,.1) 100%);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 1.6rem; transition:background var(--t);
+    }
+    .why-card:hover .why-ico { background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%); }
+    .why-ico svg { width:34px; height:34px; fill:var(--navy); transition:fill var(--t); }
+    .why-card:hover .why-ico svg { fill:#fff; }
+    .why-t { font-family: var(--font-heading); font-weight:700; font-size:.98rem; color:var(--navy); margin-bottom:.65rem; }
+    .why-d { font-size:.86rem; color:var(--muted); line-height:1.65; }
+
+    /* ══════════════════════════════════════════
+       PERMISOS BAND
+    ══════════════════════════════════════════ */
+    .perm-band { background:linear-gradient(135deg,var(--teal) 0%,var(--teal-d) 100%); padding:3.5rem 2rem; }
+    .perm-inner {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:2rem; flex-wrap:wrap;
+    }
+    .perm-txt h3 { font-family: var(--font-display); font-weight:400; font-size:1.65rem; color:#fff; margin-bottom:.4rem; letter-spacing:-.01em; }
+    .perm-txt p { color:rgba(255,255,255,.82); font-size:.96rem; }
+    .perm-tags { display:flex; gap:.8rem; flex-wrap:wrap; }
+    .ptag {
+      background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.38);
+      color:#fff; padding:.5rem 1.1rem; border-radius:8px;
+      font-family: var(--font-heading); font-weight:700; font-size:.82rem; letter-spacing:.05em;
+    }
+
+    /* ══════════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════════ */
+    #contacto { background:var(--bg); }
+    .cnt-g { display:grid; grid-template-columns:1fr 1.5fr; gap:5rem; align-items:start; }
+    .cit { display:flex; align-items:flex-start; gap:1.1rem; }
+    .cit-items { display:flex; flex-direction:column; gap:1.4rem; margin-top:2.2rem; }
+    .cit-ico {
+      width:44px; height:44px; background:var(--navy); border-radius:10px;
+      display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    }
+    .cit-ico svg { width:20px; height:20px; fill:#fff; }
+    .cit-l { font-family: var(--font-heading); font-weight:700; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); margin-bottom:.25rem; }
+    .cit-v { font-size:.94rem; color:var(--dark); line-height:1.5; }
+    .frm-wrap { background:var(--white); border-radius:var(--rl); padding:3rem 2.5rem; box-shadow:var(--shadow-m); }
+    .frm-title { font-family: var(--font-heading); font-weight:800; font-size:1.35rem; color:var(--navy); margin-bottom:1.8rem; }
+    .frm-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .fg { margin-bottom:1.2rem; }
+    .fg label { display:block; font-family: var(--font-heading); font-weight:700; font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--navy); margin-bottom:.5rem; }
+    .fg input, .fg select, .fg textarea {
+      width:100%; padding:.9rem 1.15rem;
+      border:2px solid var(--border); border-radius:10px;
+      font-family: var(--font-body); font-size:.94rem; color:var(--dark);
+      background:#fff; outline:none;
+      transition:border-color var(--t), box-shadow var(--t); appearance:none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus {
+      border-color:var(--teal); box-shadow:0 0 0 3px rgba(8,184,181,.12);
+    }
+    .fg textarea { min-height:116px; resize:vertical; }
+    .fg select {
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%237a8499' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 1rem center; padding-right:2.5rem;
+    }
+    .btn-send {
+      width:100%; background:var(--navy); color:#fff; border:none;
+      padding:1.05rem 2rem; border-radius:10px;
+      font-family: var(--font-heading); font-weight:700; font-size:.95rem; letter-spacing:.05em;
+      cursor:pointer; transition:all var(--t); margin-top:.4rem;
+    }
+    .btn-send:hover { background:var(--teal); transform:translateY(-2px); box-shadow:0 8px 28px rgba(8,184,181,.38); }
+    .btn-send.ok { background:var(--teal); }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    footer { background:var(--dark); padding:4.5rem 2rem 2rem; color:rgba(255,255,255,.52); }
+    .ft-g {
+      max-width:1200px; margin:0 auto;
+      display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:3rem;
+      padding-bottom:3rem; border-bottom:1px solid rgba(255,255,255,.07);
+    }
+    .ft-logo { height:44px; filter:brightness(0) invert(1); margin-bottom:1.2rem; }
+    .ft-brand p { font-size:.86rem; line-height:1.72; max-width:240px; }
+    .ft-social { display:flex; gap:.7rem; margin-top:1.6rem; }
+    .soc {
+      width:36px; height:36px; border-radius:8px;
+      background:rgba(255,255,255,.08); display:flex; align-items:center; justify-content:center;
+      transition:all var(--t);
+    }
+    .soc:hover { background:var(--teal); transform:translateY(-2px); }
+    .soc svg { width:17px; height:17px; fill:#fff; }
+    .ft-col h5 { font-family: var(--font-heading); font-weight:700; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:#fff; margin-bottom:1.3rem; }
+    .ft-col ul { list-style:none; }
+    .ft-col li { margin-bottom:.7rem; }
+    .ft-col a { font-size:.86rem; color:rgba(255,255,255,.5); transition:color var(--t); }
+    .ft-col a:hover { color:var(--teal); }
+    .ft-bot {
+      max-width:1200px; margin:0 auto; padding-top:2rem;
+      display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+    }
+    .ft-bot p { font-size:.8rem; }
+    .ft-pts { font-size:.72rem; color:rgba(255,255,255,.3); }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media (max-width:1024px) {
+      .srv-grid { grid-template-columns:repeat(2,1fr); }
+      .stats-g  { grid-template-columns:repeat(2,1fr); }
+      .why-g    { grid-template-columns:repeat(2,1fr); }
+      .ft-g     { grid-template-columns:1fr 1fr; gap:2rem; }
+    }
+    @media (max-width:900px) {
+      .about-g, .alm-g, .cnt-g { grid-template-columns:1fr; gap:3rem; }
+      .about-float { display:none; }
+    }
+    @media (max-width:768px) {
+      .nav-ul  { display:none!important; }
+      .hbg     { display:flex; }
+      section  { padding:4rem 0; }
+      .srv-grid { grid-template-columns:1fr; }
+      .stats-g  { grid-template-columns:repeat(2,1fr); }
+      .stat:not(:last-child)::after { display:none; }
+      .why-g    { grid-template-columns:1fr; }
+      .frm-row  { grid-template-columns:1fr; }
+      .ft-g     { grid-template-columns:1fr; }
+      .ft-bot   { flex-direction:column; text-align:center; }
+      .perm-inner { flex-direction:column; text-align:center; }
+      .alm-list { grid-template-columns:1fr; }
+      .r1,.r2,.r3 { display:none; }
+    }
+    @media (max-width:500px) {
+      .stats-g  { grid-template-columns:1fr; }
+      .pillars  { grid-template-columns:1fr; }
+      .alm-cards { grid-template-columns:1fr; }
+      .alm-card.feat { flex-direction:column; gap:.8rem; text-align:center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAVBAR ─────────────────────────────── -->
+<nav id="nav">
+  <a href="#inicio" class="nav-logo">
+    <img src="img/Logotipo-Horizontal-Comercial.png" alt="Loginco">
+  </a>
+  <ul class="nav-ul" id="navUl">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#almacen">Almacén</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+  <button class="hbg" id="hbg" aria-label="Menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile overlay -->
+<nav class="mob-nav" id="mobNav">
+  <a href="#inicio">Inicio</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#almacen">Almacén</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- ─── HERO ──────────────────────────────── -->
+<section id="inicio">
+  <div class="hero-grid"></div>
+  <div class="glow g1"></div>
+  <div class="glow g2"></div>
+  <div class="glow g3"></div>
+  <div class="ring r1"></div>
+  <div class="ring r2"></div>
+  <div class="ring r3"></div>
+
+  <div class="hero-inner">
+    <img src="img/Logotipo-Vertical-Descriptivo.png" alt="Loginco" class="hero-logo">
+    <div class="hero-badge">Agencia Aduanal Autorizada</div>
+    <h1 class="hero-h1">
+      En el comercio global<br>tu solución es <span>LOGINCO</span>
+    </h1>
+    <p class="hero-p">
+      Logística Internacional y Servicios en Comercio Exterior.<br>
+      Más de 9 años optimizando tus procesos de importación y exportación.
+    </p>
+    <div class="hero-btns">
+      <a href="#servicios" class="btn btn-teal">Nuestros Servicios</a>
+      <a href="#contacto" class="btn btn-ghost">Solicitar Cotización</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="mouse"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- wave -->
+<div class="wave" style="background:var(--grad-hero);">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#f4f6fb"/>
+  </svg>
+</div>
+
+<!-- ─── ABOUT ──────────────────────────────── -->
+<section id="nosotros">
+  <div class="wrap">
+    <div class="about-g">
+      <!-- Card -->
+      <div class="about-vis rv">
+        <div class="about-card">
+          <img src="img/Isotipo-Loginco.svg" alt="Loginco" class="about-iso">
+          <div class="about-big counter" data-target="9">9</div>
+          <div class="about-lbl">Años de experiencia<br>en comercio exterior</div>
+          <div class="about-pts">Patentes: 3517 · 1656 · 1627 · 3474</div>
+        </div>
+        <div class="about-float">
+          <div class="af-n">2,200<small style="font-size:.45em"> m²</small></div>
+          <div class="af-l">Almacén<br>bajo cubierta</div>
+        </div>
+      </div>
+      <!-- Text -->
+      <div>
+        <div class="lbl rv">Quiénes somos</div>
+        <h2 class="h2 rv d1">Soluciones integrales para el comercio exterior</h2>
+        <p class="sub rv d2">Somos una agencia aduanal comprometida con ofrecer soluciones completas a tus procesos de comercio exterior. Contamos con personal altamente capacitado e infraestructura diseñada para atender todas tus necesidades de importación, exportación y logística internacional.</p>
+        <div class="pillars">
+          <div class="pill rv d2"><div class="pill-t">Eficiencia</div><div class="pill-d">Procesos optimizados para reducir tiempos y costos operativos.</div></div>
+          <div class="pill rv d3"><div class="pill-t">Rapidez</div><div class="pill-d">Despachos ágiles con los mejores tiempos de respuesta.</div></div>
+          <div class="pill rv d4"><div class="pill-t">Servicio</div><div class="pill-d">Atención personalizada dedicada a cada cliente.</div></div>
+          <div class="pill rv d5"><div class="pill-t">Experiencia</div><div class="pill-d">Más de 9 años en el comercio exterior internacional.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SERVICES ───────────────────────────── -->
+<section id="servicios">
+  <div class="wrap">
+    <div class="srv-intro">
+      <div class="lbl rv">Lo que hacemos</div>
+      <h2 class="h2 h2-c rv d1">Nuestros Servicios</h2>
+      <p class="sub sub-c rv d2">Ofrecemos una gama completa de soluciones logísticas y aduanales para facilitar tu comercio exterior con eficiencia, confianza y alcance global.</p>
+    </div>
+    <div class="srv-grid">
+
+      <div class="srv-card rv d1">
+        <div class="srv-ico">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.89 2 2 2h12a2 2 0 0 0 2-2V8l-6-6zM13 3.5 18.5 9H13V3.5zM8 16h8v2H8v-2zm0-4h8v2H8v-2z"/></svg>
+        </div>
+        <div class="srv-t">Despacho Aduanero</div>
+        <div class="srv-d">Rapidez y eficacia para tus despachos de importación y exportación. Gestionamos todos los trámites aduanales con precisión, experiencia y pleno cumplimiento regulatorio.</div>
+      </div>
+
+      <div class="srv-card rv d2">
+        <div class="srv-ico">
+          <svg viewBox="0 0 24 24"><path d="M2 3h20v5H2V3zm1 6h18v12H3V9zm3 2v2h5v-2H6zm0 4v2h5v-2H6zm7 0v2h2v-2h-2z"/></svg>
+        </div>
+        <div class="srv-t">Desconsolidación &amp; Almacenaje</div>
+        <div class="srv-d">Instalaciones con 2,200 m² y 550 m² bajo cubierta, más 9,000 m² totales con patio de maniobras. Funciona como CEDIS estratégico en tu cadena de suministro.</div>
+      </div>
+
+      <div class="srv-card rv d3">
+        <div class="srv-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 13.41L8.59 12 7.17 13.41 11 17.25l6.83-6.84-1.41-1.41L11 14.41z"/></svg>
+        </div>
+        <div class="srv-t">Custodia</div>
+        <div class="srv-d">Protección armada para el traslado de carga y contenedores en rutas urbanas y carreteras. Personal capacitado con amplia experiencia en seguridad de mercancías de alto valor.</div>
+      </div>
+
+      <div class="srv-card rv d4">
+        <div class="srv-ico">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9 1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        </div>
+        <div class="srv-t">Flete Terrestre</div>
+        <div class="srv-d">Transporte local y nacional de mercancías rápido y eficiente. Tu carga recibe seguimiento continuo durante todo el trayecto, garantizando su integridad y puntualidad.</div>
+      </div>
+
+      <div class="srv-card rv d5">
+        <div class="srv-ico">
+          <svg viewBox="0 0 24 24"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.64 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.15.52-.06.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>
+        </div>
+        <div class="srv-t">Flete Marítimo</div>
+        <div class="srv-d">Amplia red de navieros que conecta los principales puertos de Europa, Asia y América. Cubrimos todas las rutas internacionales con los mejores operadores del mercado global.</div>
+      </div>
+
+      <div class="srv-card rv d6">
+        <div class="srv-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+        </div>
+        <div class="srv-t">Gestión de Permisos</div>
+        <div class="srv-d">Tramitamos toda la documentación regulatoria ante dependencias gubernamentales: permisos sanitarios, SAGARPA, COFEPRIS y demás autorizaciones requeridas para tu mercancía.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── STATS ──────────────────────────────── -->
+<section id="stats">
+  <div class="wrap">
+    <div class="stats-g">
+      <div class="stat rv">
+        <span class="stat-n"><span class="counter" data-target="9">9</span><span class="stat-sup">+</span></span>
+        <div class="stat-l">Años de Experiencia</div>
+      </div>
+      <div class="stat rv d2">
+        <span class="stat-n"><span class="counter" data-target="9000">9,000</span><span class="stat-sup"> m²</span></span>
+        <div class="stat-l">Superficie Total</div>
+      </div>
+      <div class="stat rv d3">
+        <span class="stat-n"><span class="counter" data-target="4">4</span></span>
+        <div class="stat-l">Patentes Aduanales</div>
+      </div>
+      <div class="stat rv d4">
+        <span class="stat-n"><span class="counter" data-target="6">6</span></span>
+        <div class="stat-l">Servicios Integrales</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WAREHOUSE ─────────────────────────── -->
+<section id="almacen" style="padding-bottom:6rem;">
+  <!-- top wave -->
+  <div class="wave">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block;width:100%;">
+      <path d="M0,0 C480,60 960,0 1440,40 L1440,0 Z" fill="#ffffff"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="alm-g">
+      <div class="alm-text">
+        <div class="lbl lbl-w rv">Infraestructura</div>
+        <h2 class="h2 h2-w rv d1">Centro de Distribución &amp; Almacenaje</h2>
+        <p class="sub sub-w rv d2">Instalaciones estratégicamente ubicadas que funcionan como CEDIS en tu cadena de suministro. Capacidad y tecnología para manejar tu mercancía con los más altos estándares operativos.</p>
+        <div class="alm-list rv d3">
+          <div class="alm-i"><div class="alm-it">Desconsolidación</div><div class="alm-id">Separación eficiente de embarques consolidados entrantes.</div></div>
+          <div class="alm-i"><div class="alm-it">Consolidación</div><div class="alm-id">Agrupación de mercancías para optimizar costos de envío.</div></div>
+          <div class="alm-i"><div class="alm-it">Almacenaje Seguro</div><div class="alm-id">Resguardo de mercancía con control de inventario.</div></div>
+          <div class="alm-i"><div class="alm-it">CEDIS Estratégico</div><div class="alm-id">Punto de distribución dentro de tu cadena de suministro.</div></div>
+        </div>
+      </div>
+      <div class="alm-cards rv d2">
+        <div class="alm-card feat">
+          <div>
+            <div class="alm-big">9,000</div>
+            <div class="alm-unit">m²</div>
+          </div>
+          <div class="alm-lbl">Superficie total con patio de maniobras</div>
+        </div>
+        <div class="alm-card">
+          <div class="alm-big">2,200</div>
+          <div class="alm-unit">m²</div>
+          <div class="alm-lbl">Almacén principal</div>
+        </div>
+        <div class="alm-card">
+          <div class="alm-big">550</div>
+          <div class="alm-unit">m²</div>
+          <div class="alm-lbl">Área bajo cubierta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHY US ────────────────────────────── -->
+<section id="porque">
+  <div class="wrap">
+    <div class="why-hd">
+      <div class="lbl rv">Por qué elegirnos</div>
+      <h2 class="h2 h2-c rv d1">Comprometidos con tu éxito<br>en el comercio exterior</h2>
+      <p class="sub sub-c rv d2">Nuestro equipo de especialistas trabaja para ofrecerte soluciones ágiles, confiables y personalizadas que impulsen tu negocio internacional.</p>
+    </div>
+    <div class="why-g">
+      <div class="why-card rv d1">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24"><path d="M13 2.05v2.02c3.95.49 7 3.85 7 7.93 0 3.21-1.81 6-4.72 7.28L13 17v5h5l-1.22-1.22C19.91 19.07 22 15.76 22 12c0-5.18-3.95-9.45-9-9.95zM11 2.05C5.95 2.55 2 6.82 2 12c0 3.76 2.09 7.07 5.22 8.78L6 22h5v-5l-2.28 2.28C6.81 18 5 15.21 5 12c0-4.08 3.05-7.44 7-7.93V2.05z"/></svg>
+        </div>
+        <div class="why-t">Agilidad Operativa</div>
+        <div class="why-d">Despachos rápidos que minimizan demoras y reducen costos de almacenaje temporal en aduana.</div>
+      </div>
+      <div class="why-card rv d2">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        </div>
+        <div class="why-t">Confiabilidad Total</div>
+        <div class="why-d">Patentes aduanales autorizadas que garantizan operaciones seguras, transparentes y en plena regla.</div>
+      </div>
+      <div class="why-card rv d3">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+        </div>
+        <div class="why-t">Atención Personalizada</div>
+        <div class="why-d">Un equipo dedicado que comprende tus necesidades y las particularidades de tu industria y mercancía.</div>
+      </div>
+      <div class="why-card rv d4">
+        <div class="why-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 17.93V18a1 1 0 1 0-2 0v1.93A8.001 8.001 0 0 1 4.07 13H6a1 1 0 1 0 0-2H4.07A8.001 8.001 0 0 1 11 4.07V6a1 1 0 1 1 2 0V4.07A8.001 8.001 0 0 1 19.93 11H18a1 1 0 1 1 0 2h1.93A8.001 8.001 0 0 1 13 19.93z"/></svg>
+        </div>
+        <div class="why-t">Alcance Global</div>
+        <div class="why-d">Red consolidada de socios en los principales puertos y rutas comerciales de Europa, Asia y América.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PERMISOS BAND ─────────────────────── -->
+<div class="perm-band rv">
+  <div class="perm-inner">
+    <div class="perm-txt">
+      <h3>Gestión de Permisos Regulatorios</h3>
+      <p>Tramitamos autorizaciones ante las principales dependencias gubernamentales de México</p>
+    </div>
+    <div class="perm-tags">
+      <span class="ptag">SAGARPA</span>
+      <span class="ptag">COFEPRIS</span>
+      <span class="ptag">Permisos Sanitarios</span>
+      <span class="ptag">SAT · Aduanas</span>
+    </div>
+  </div>
+</div>
+
+<!-- ─── CONTACT ───────────────────────────── -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="cnt-g">
+      <!-- Left -->
+      <div>
+        <div class="lbl rv">Contáctanos</div>
+        <h2 class="h2 rv d1">¿Listo para optimizar tu comercio exterior?</h2>
+        <p class="sub rv d2">Nuestro equipo está listo para asesorarte y ofrecerte la mejor solución para tus necesidades de importación, exportación y logística internacional.</p>
+        <div class="cit-items">
+          <div class="cit rv d3">
+            <div class="cit-ico">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <div class="cit-l">Ubicación</div>
+              <div class="cit-v">México · Logística Internacional y<br>Servicios en Comercio Exterior, S.C.</div>
+            </div>
+          </div>
+          <div class="cit rv d4">
+            <div class="cit-ico">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <div class="cit-l">Correo Electrónico</div>
+              <div class="cit-v"><a href="mailto:contacto@loginco.com.mx" style="color:inherit;">contacto@loginco.com.mx</a></div>
+            </div>
+          </div>
+          <div class="cit rv d5">
+            <div class="cit-ico">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <div>
+              <div class="cit-l">Patentes Aduanales</div>
+              <div class="cit-v">3517 · 1656 · 1627 · 3474</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Form -->
+      <div class="frm-wrap rv d2">
+        <div class="frm-title">Solicita una Cotización</div>
+        <form id="cForm" novalidate>
+          <div class="frm-row">
+            <div class="fg"><label for="fn">Nombre *</label><input type="text" id="fn" placeholder="Tu nombre completo" required></div>
+            <div class="fg"><label for="fe">Empresa</label><input type="text" id="fe" placeholder="Nombre de tu empresa"></div>
+          </div>
+          <div class="frm-row">
+            <div class="fg"><label for="ft">Teléfono</label><input type="tel" id="ft" placeholder="+52 (000) 000-0000"></div>
+            <div class="fg"><label for="fem">Correo Electrónico *</label><input type="email" id="fem" placeholder="correo@empresa.com" required></div>
+          </div>
+          <div class="fg">
+            <label for="fsv">Servicio de Interés</label>
+            <select id="fsv">
+              <option value="">Selecciona un servicio...</option>
+              <option>Despacho Aduanero</option>
+              <option>Desconsolidación &amp; Almacenaje</option>
+              <option>Custodia</option>
+              <option>Flete Terrestre</option>
+              <option>Flete Marítimo</option>
+              <option>Gestión de Permisos</option>
+              <option>Múltiples Servicios</option>
+            </select>
+          </div>
+          <div class="fg"><label for="fm">Mensaje</label><textarea id="fm" placeholder="Cuéntanos sobre tu operación: mercancía, origen, destino y cualquier detalle relevante..."></textarea></div>
+          <button type="submit" class="btn-send" id="btnSend">Enviar Solicitud</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────── -->
+<footer>
+  <div class="ft-g">
+    <div class="ft-brand">
+      <img src="img/Logotipo-Horizontal-Descriptivo.png" alt="Loginco" class="ft-logo">
+      <p>Logística Internacional y Servicios en Comercio Exterior, S.C. Tu solución integral en el comercio global.</p>
+      <div class="ft-social">
+        <a href="https://facebook.com" target="_blank" rel="noopener" class="soc" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h5>Servicios</h5>
+      <ul>
+        <li><a href="#servicios">Despacho Aduanero</a></li>
+        <li><a href="#servicios">Almacenaje</a></li>
+        <li><a href="#servicios">Custodia</a></li>
+        <li><a href="#servicios">Flete Terrestre</a></li>
+        <li><a href="#servicios">Flete Marítimo</a></li>
+        <li><a href="#servicios">Gestión de Permisos</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h5>Empresa</h5>
+      <ul>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#almacen">Infraestructura</a></li>
+        <li><a href="#porque">Por Qué Loginco</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h5>Contacto</h5>
+      <ul>
+        <li><a href="mailto:contacto@loginco.com.mx">contacto@loginco.com.mx</a></li>
+        <li><a href="https://loginco.com.mx" target="_blank" rel="noopener">loginco.com.mx</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p>&copy; 2026 Loginco – Logística Internacional y Servicios en Comercio Exterior, S.C.</p>
+    <div class="ft-pts">Patentes Aduanales: 3517 · 1656 · 1627 · 3474</div>
+  </div>
+</footer>
+
+<!-- ─── JS ────────────────────────────────── -->
+<script>
+  /* navbar scroll */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('up', scrollY > 60), { passive: true });
+
+  /* hamburger */
+  const hbg = document.getElementById('hbg');
+  const mob = document.getElementById('mobNav');
+  hbg.addEventListener('click', () => {
+    const o = mob.classList.toggle('open');
+    hbg.classList.toggle('x', o);
+    hbg.setAttribute('aria-expanded', o);
+    document.body.style.overflow = o ? 'hidden' : '';
+  });
+  mob.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mob.classList.remove('open');
+    hbg.classList.remove('x');
+    hbg.setAttribute('aria-expanded', false);
+    document.body.style.overflow = '';
+  }));
+
+  /* reveal on scroll */
+  const rvObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
+
+  /* active nav */
+  const secs = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('#navUl a');
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting)
+        links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { threshold: 0.45 }).forEach ? null :
+  (() => {
+    const o = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting)
+          links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+      });
+    }, { threshold: 0.45 });
+    secs.forEach(s => o.observe(s));
+  })();
+  /* safer active nav */
+  const activeObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting)
+        links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+    });
+  }, { threshold: 0.45 });
+  secs.forEach(s => activeObs.observe(s));
+
+  /* counter animation */
+  function countUp(el) {
+    const t = parseInt(el.dataset.target.replace(/,/g, ''));
+    const dur = 1800, s = performance.now();
+    const big = t >= 1000;
+    (function tick(now) {
+      const p = Math.min((now - s) / dur, 1);
+      const v = Math.round((1 - Math.pow(1 - p, 3)) * t);
+      el.textContent = big ? v.toLocaleString('es-MX') : v;
+      if (p < 1) requestAnimationFrame(tick);
+    })(s);
+  }
+  const cntObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { countUp(e.target); cntObs.unobserve(e.target); } });
+  }, { threshold: 0.6 });
+  document.querySelectorAll('.counter').forEach(el => cntObs.observe(el));
+
+  /* form */
+  document.getElementById('cForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const n = document.getElementById('fn').value.trim();
+    const em = document.getElementById('fem').value.trim();
+    if (!n || !em) { alert('Por favor completa los campos requeridos (Nombre y Correo).'); return; }
+    const btn = document.getElementById('btnSend');
+    btn.textContent = '¡Solicitud enviada! Te contactaremos pronto.';
+    btn.classList.add('ok');
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Enviar Solicitud';
+      btn.classList.remove('ok');
+      btn.disabled = false;
+      this.reset();
+    }, 4500);
+  });
+</script>
+</body>
+</html>
