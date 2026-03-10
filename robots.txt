@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /font/
+Allow: /
+
+Sitemap: https://loginco.com.mx/sitemap.xml
