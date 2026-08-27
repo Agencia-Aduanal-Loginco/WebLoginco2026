@@ -1,4 +1,4 @@
 .env
-.perfvenv/
-.vscode
 .claude
+.vscode
+.perfvenv/
