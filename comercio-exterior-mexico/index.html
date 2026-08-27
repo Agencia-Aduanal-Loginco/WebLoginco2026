@@ -65,18 +65,18 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"></noscript>
 
-  <link rel="stylesheet" href="/style.css">
+  <!-- Fuentes autoalojadas (woff2) – precarga de las críticas para el primer render -->
+  <link rel="preload" as="font" type="font/woff2" href="/font/inter.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/font/montserrat-700.woff2" crossorigin>
+
+  <link rel="stylesheet" href="/style.min.css?v=20260827">
 </head>
 <body>
 
 <nav id="nav">
   <a href="/" class="nav-logo">
-    <img src="/img/Logotipo-Horizontal-Comercial.png" alt="Loginco – Agencia Aduanal" decoding="async">
+    <img src="/img/logo-nav.png" alt="Loginco – Agencia Aduanal" width="334" height="96" decoding="async">
   </a>
   <ul class="nav-ul" id="navUl">
     <li><a href="/">Inicio</a></li>
@@ -142,7 +142,7 @@
 <footer>
   <div class="ft-g">
     <div class="ft-brand">
-      <img src="/img/Logotipo-Horizontal-Descriptivo.png" alt="Loginco – Logística Internacional y Comercio Exterior" class="ft-logo" loading="lazy" decoding="async">
+      <img src="/img/logo-footer.png" alt="Loginco – Logística Internacional y Comercio Exterior" class="ft-logo" width="320" height="92" loading="lazy" decoding="async">
       <p>Logística Internacional y Servicios en Comercio Exterior, S.C. Tu solución integral en el comercio global.</p>
       <div class="ft-social">
         <a href="https://facebook.com" target="_blank" rel="noopener" class="soc" aria-label="Facebook">

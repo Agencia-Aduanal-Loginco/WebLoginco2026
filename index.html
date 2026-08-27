@@ -79,22 +79,22 @@
   </script>
 
   <!-- Preload hero image (LCP crítico) -->
-  <link rel="preload" as="image" href="img/Logotipo-Vertical-Descriptivo.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/logo-hero.png" fetchpriority="high">
 
-  <!-- Inter desde Google Fonts – carga no bloqueante -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"></noscript>
 
-  <link rel="stylesheet" href="/style.css">
+  <!-- Fuentes autoalojadas (woff2) – precarga de las críticas para el primer render -->
+  <link rel="preload" as="font" type="font/woff2" href="/font/inter.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/font/montserrat-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/font/montserrat-700.woff2" crossorigin>
+
+  <link rel="stylesheet" href="/style.min.css?v=20260827">
 </head>
 <body>
 
 <!-- ─── NAVBAR ─────────────────────────────── -->
 <nav id="nav">
   <a href="#inicio" class="nav-logo">
-    <img src="img/Logotipo-Horizontal-Comercial.png" alt="Loginco – Agencia Aduanal" decoding="async">
+    <img src="/img/logo-nav.png" alt="Loginco – Agencia Aduanal" width="334" height="96" decoding="async">
   </a>
   <ul class="nav-ul" id="navUl">
     <li><a href="#inicio">Inicio</a></li>
@@ -128,7 +128,7 @@
   <div class="ring r3"></div>
 
   <div class="hero-inner">
-    <img src="img/Logotipo-Vertical-Descriptivo.png" alt="Loginco – Agencia Aduanal Autorizada" class="hero-logo" fetchpriority="high" decoding="async">
+    <img src="/img/logo-hero.png" alt="Loginco – Agencia Aduanal Autorizada" class="hero-logo" width="224" height="190" fetchpriority="high" decoding="async">
     <div class="hero-badge">Agencia Aduanal</div>
     <h1 class="hero-h1">
       <span>LOGINCO</span>
@@ -163,7 +163,7 @@
       <!-- Card -->
       <div class="about-vis rv">
         <div class="about-card">
-          <img src="img/Isotipo-Loginco.svg" alt="Isotipo Loginco – Agencia Aduanal" class="about-iso" loading="lazy" decoding="async">
+          <img src="/img/Isotipo-Loginco.svg" alt="Isotipo Loginco – Agencia Aduanal" class="about-iso" width="70" height="50" loading="lazy" decoding="async">
           <div class="about-big counter" data-target="9">9</div>
           <div class="about-lbl">Años de experiencia<br>en comercio exterior</div>
           <div class="about-pts">Patentes: 3517 · 1656 · 1627 · 3474 · 1927</div>
@@ -461,7 +461,7 @@
 <footer>
   <div class="ft-g">
     <div class="ft-brand">
-      <img src="img/Logotipo-Horizontal-Descriptivo.png" alt="Loginco – Logística Internacional y Comercio Exterior" class="ft-logo" loading="lazy" decoding="async">
+      <img src="/img/logo-footer.png" alt="Loginco – Logística Internacional y Comercio Exterior" class="ft-logo" width="320" height="92" loading="lazy" decoding="async">
       <p>Logística Internacional y Servicios en Comercio Exterior, S.C. Tu solución integral en el comercio global.</p>
       <div class="ft-social">
         <a href="https://facebook.com" target="_blank" rel="noopener" class="soc" aria-label="Facebook">

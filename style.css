@@ -1,152 +1,15 @@
-    /* ── FUENTES LOCALES ─────────────────────────────────────────────────
-       Montserrat: todos los pesos disponibles (locales en /font/)
-       Gentona: fuente display moderna para headings de alto impacto
-       Inter: desde Google Fonts (sin archivo local), usado en body y forms
-    ──────────────────────────────────────────────────────────────────── */
-
-    /* Montserrat Thin (100) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Thin.otf') format('opentype');
-      font-weight: 100;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-ThinItalic.otf') format('opentype');
-      font-weight: 100;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat ExtraLight (200) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-ExtraLight.otf') format('opentype');
-      font-weight: 200;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-ExtraLightItalic.otf') format('opentype');
-      font-weight: 200;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat Light (300) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Light.otf') format('opentype');
-      font-weight: 300;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-LightItalic.otf') format('opentype');
-      font-weight: 300;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat Regular (400) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Regular.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Italic.otf') format('opentype');
-      font-weight: 400;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat Medium (500) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Medium.otf') format('opentype');
-      font-weight: 500;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-MediumItalic.otf') format('opentype');
-      font-weight: 500;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat SemiBold (600) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-SemiBold.otf') format('opentype');
-      font-weight: 600;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-SemiBoldItalic.otf') format('opentype');
-      font-weight: 600;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat Bold (700) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Bold.otf') format('opentype');
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-BoldItalic.otf') format('opentype');
-      font-weight: 700;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat ExtraBold (800) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-ExtraBold.otf') format('opentype');
-      font-weight: 800;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-ExtraBoldItalic.otf') format('opentype');
-      font-weight: 800;
-      font-style: italic;
-      font-display: swap;
-    }
-
-    /* Montserrat Black (900) */
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-Black.otf') format('opentype');
-      font-weight: 900;
-      font-style: normal;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat';
-      src: url('font/Montserrat-BlackItalic.otf') format('opentype');
-      font-weight: 900;
-      font-style: italic;
-      font-display: swap;
-    }
+/* ── FUENTES AUTOALOJADAS (woff2) ─────────────────────────────────────
+   Montserrat: pesos 400/500/600/700/800/900, subconjunto latin.
+   Inter: fuente variable (100-900), subconjunto latin. Body y formularios.
+   Originales .otf eliminados: woff2 pesa ~15x menos y se subsetea.
+──────────────────────────────────────────────────────────────────── */
+@font-face{font-family:'Montserrat';src:url('/font/montserrat-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Montserrat';src:url('/font/montserrat-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap;}
+@font-face{font-family:'Montserrat';src:url('/font/montserrat-600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:'Montserrat';src:url('/font/montserrat-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}
+@font-face{font-family:'Montserrat';src:url('/font/montserrat-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap;}
+@font-face{font-family:'Montserrat';src:url('/font/montserrat-900.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap;}
+@font-face{font-family:'Inter';src:url('/font/inter.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap;}
 
     /* ── TOKENS ──────────────────────────────── */
     :root {
@@ -657,3 +520,10 @@
 
 /* ── SERVICE CARDS AS LINKS (homepage #servicios) ────────────────────── */
 a.srv-card { display:block; cursor:pointer; }
+
+/* ── RENDIMIENTO / CORE WEB VITALS ───────────────────────────────────── */
+/* Respeta la preferencia del sistema: desactiva las animaciones en bucle
+   (glows con blur(80px), pulsos) que consumen GPU en móvil de gama baja. */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}
+}
