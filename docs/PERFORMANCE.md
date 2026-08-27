@@ -37,9 +37,16 @@ SUBSET="U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-2
 
 **Regenerar** tras editar `style.css`:
 ```bash
-npx lightningcss-cli --minify --targets ">= 0.25%" style.css -o style.min.css
+./build.sh
 ```
-Y subir el número de `?v=` en los 6 `index.html`.
+`build.sh` minifica `style.css` → `style.min.css` **y lo incrusta inline** en el
+`<head>` de los 6 `index.html`, entre los marcadores `<!--CSS:START-->` y
+`<!--CSS:END-->`. No hay `<link rel="stylesheet">`: cero peticiones que bloqueen
+el render (elimina la auditoría "Solicitudes que bloquean el renderizado").
+`style.min.css` se mantiene como artefacto pero ya no se sirve.
+
+> Tras cualquier cambio en `style.css` hay que ejecutar `./build.sh` y commitear
+> los HTML resultantes.
 
 ### 3. Imágenes de logotipo
 Los logos se renderizan como silueta blanca (`filter:brightness(0) invert(1)`),
@@ -55,26 +62,35 @@ Los PNG originales grandes se conservan porque el JSON-LD (`logo`, `image`) los
 referencia como URL absolutas (Google los quiere en alta resolución para el
 schema). Todos los `<img>` llevan ahora `width`/`height` explícitos.
 
-## Pendiente: cabeceras del servidor (DigitalOcean App Platform)
+## Pendiente MANUAL: cabeceras de caché (DigitalOcean App Platform · Static Site)
 
-App Platform ya aplica **gzip/brotli automáticamente** a HTML/CSS/JS/SVG, así que
-la auditoría "Habilitar compresión de texto" debería pasar sin tocar nada.
+Es la auditoría que queda por cerrar ("Usar tiempos de vida de caché eficientes").
+App Platform ya aplica **gzip/brotli automáticamente**; la compresión no hay que
+tocarla. Falta el `Cache-Control`.
 
-Falta verificar la **política de caché**. Comprobar en producción:
+En el panel de DigitalOcean:
+**Apps → (tu app) → Settings → el componente Static Site → "HTTP Response Headers"
+→ Edit**, y añadir reglas por prefijo de ruta:
+
+| Path (prefijo) | Header | Valor |
+|---|---|---|
+| `/font/` | `Cache-Control` | `public, max-age=31536000, immutable` |
+| `/img/`  | `Cache-Control` | `public, max-age=31536000, immutable` |
+
+Los nombres de `font/*.woff2` e `img/*` son estables por contenido, así que un
+año de caché es seguro. Si cambias un logo, renómbralo (`logo-hero-2.png`).
+El CSS ya no necesita regla porque va inline en el HTML.
+
+Verificar tras desplegar:
 ```bash
-curl -sI https://loginco.com.mx/style.min.css | grep -i cache-control
-curl -sI https://loginco.com.mx/font/inter.woff2 | grep -i cache-control
+curl -sI https://loginco.com.mx/font/inter.woff2  | grep -i 'cache-control\|content-encoding'
 curl -sI https://loginco.com.mx/img/logo-hero.png | grep -i cache-control
+curl -sw 'TTFB: %{time_starttransfer}s\n' -o /dev/null -s https://loginco.com.mx/
 ```
-- Los nombres de `font/*.woff2` y `img/logo-*.png` son inmutables por contenido
-  y `style.min.css` lleva `?v=`, así que es seguro un `max-age` largo
-  (`public, max-age=31536000, immutable`).
-- Si App Platform no permite configurar `Cache-Control` por ruta para el
-  componente de sitio estático, la alternativa es poner el dominio detrás de
-  Cloudflare (plan gratuito) y fijar ahí las reglas de caché.
+Si el TTFB de la última línea sale > 1 s de forma constante, el problema es la
+CDN/región de App Platform, no el código; considerar Cloudflare (gratis) delante.
 
-## Opcional (siguiente iteración si FCP sigue en ámbar)
-- Extraer el CSS crítico del hero + nav (~3 KB) e insertarlo inline en `<head>`,
-  cargando `style.min.css` de forma no bloqueante (mismo patrón `preload`+`onload`
-  que ya se usa). Se dejó fuera ahora para no fragilizar el mantenimiento de 6
-  páginas sin un paso de build.
+## Notas
+- `build.sh` requiere `npx` (descarga `lightningcss-cli`) y `python3`.
+- Los 19 `.otf` viejos siguen en el historial de git por si hay que regenerar
+  subconjuntos con otros glifos.
